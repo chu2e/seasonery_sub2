@@ -1,0 +1,885 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+body{
+  font-family: 'SUIT-Medium';
+  color: #2e4e43;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+}
+
+/*SUIT-Medium*/ 
+
+@font-face {
+  font-family: 'SUIT-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*SUIT-Bold*/ 
+@font-face {
+  font-family: 'SUIT-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/*고정*/
+
+.fixed a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.fixed{
+  width: 116px;
+  height: 116px;
+  position: fixed; bottom: 40px; right: 40px;
+  z-index: 300; /*모든 포지션보다 최상단에 위치*/
+}
+.fixed_rotate{
+  display: block;
+  width: 96px;
+  height: 96px;
+  position: fixed; bottom: 50px; right: 50px;
+  animation: fixed linear infinite 15s;
+}
+@keyframes fixed {
+  0%{transform: rotate(0deg);
+  }
+  100%{transform: rotate(360deg);
+  }
+}
+
+
+
+/*메인_배경*/
+
+#top{
+  background: url(../images/header_background.png) no-repeat top center;
+  width: 100%;
+  height: 1275px;
+}
+
+
+
+/*헤더*/
+
+.header{
+  width: 1320px;
+  margin: 0 auto;
+  padding-top: 36px;
+  height: 105px;
+  box-sizing: border-box;
+}
+.header img{display: block; /*이미지 고유의 여백 제거*/
+}
+.symbol{
+  /* display: block; */
+  float: left;
+}
+.logo_small{
+  /* display: block; */
+  float: left;
+  padding-top: 16px;
+  margin-left: 55px;
+}
+
+.menu{
+  position: relative; /*부모 지정*/
+  float: right;
+  margin: 24px 0 24px 30px;
+  width: 30px;
+  height: 20px;
+}
+.menubar{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.menubar_sub{
+  width: 30px;
+  height: 141px;
+  background: url(../images/hover_menubar.png) no-repeat top center;
+  position: absolute; /*상위의 div에 대하여 자식 지정*/
+  top: 0;
+  left: 0;
+  z-index: 160;
+  display: none;
+}
+.menubar_sub ul{
+  padding: 38px 0 0 6px;
+}
+.menubar_sub ul li:nth-child(1){
+  width: 16px;
+  height: 17px;
+  padding-left: 1px;
+}
+.menubar_sub ul li:nth-child(2){
+  width: 18px;
+  height: 13px;
+  margin: 18px 0;
+}
+.menubar_sub ul li:nth-child(3){
+  width: 18px;
+  height: 18px;
+}
+.menubar_sub ul li:hover a img{
+  opacity: 0.8;
+}
+
+.nav{
+  float: right;
+}
+.nav>li{
+  float: left;
+  position: relative; /*부모 지정*/
+  z-index: 99;
+}
+.nav>li>a{
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #2e4e43;
+  padding: 21.5px 30px;
+  position: relative; /*상위의 li와 별개로 자기 자신에게 부모값을 줌*/
+  z-index: 99; /*더 낮은 숫자값을 주더라도 이 a 자기 자신 자체로 부모가 되기 때문에 순서 변경 없음*/
+}
+.nav>li:nth-child(3)>a,
+.nav>li:nth-child(4)>a {
+  transition-property:all; /*속성값*/
+  transition-duration:0.1s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+}
+.nav>li:nth-child(3):hover>a{
+  color: #718878;
+}
+.nav>li:nth-child(4):hover>a{
+  color: #718878;
+}
+
+
+
+/*서브메뉴*/
+
+.nav>li:nth-child(1):hover>a{
+  color: #eadfd0;
+}
+.nav>li:nth-child(2):hover>a{
+  color: #eadfd0;
+}
+/* .nav li:nth-child(1):hover .sub1{display: block;
+} */
+/* .nav li:nth-child(2):hover .sub2{display: block;
+} */
+
+.sub1{
+  position: absolute; top: -58.5px; left: 0; /*상위의 li에 대하여 자식 지정*/
+  background-color: #2e4e43;
+  width: 125.75px;
+  height: 220px;
+  background: url(../images/sub1_back.png) no-repeat center top;
+  display: none;
+}
+.sub1 ul{
+  margin-top: 125px;
+}
+.sub1 ul li a{
+  display: block;
+  color: #93a69c;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 10px;
+
+  transition-property:all; /*속성값*/
+  transition-duration:0.1s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+}
+.sub1 ul li a:hover{
+  color: #eadfd0;
+}
+
+.sub2{
+  position: absolute; top: -58.5px; left: 0;
+  background-color: #2e4e43;
+  width: 119.55px;
+  height: 220px;
+  background: url(../images/sub2_back.png) no-repeat center top;
+  display: none;
+}
+.sub2 ul{
+  margin-top: 125px;
+}
+.sub2 ul li a{
+  display: block;
+  color: #93a69c;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-top: 10px;
+}
+.sub2 ul li a:hover{
+  color: #eadfd0;
+}
+
+
+
+/*메인_본문*/
+
+.main_wrap{
+  width: 680px;
+  height: 1170px;
+  margin: 0 auto;
+  position: relative; /*메인 텍스트, 링크의 부모*/
+  background: url(../images/main_img.png) no-repeat left bottom; /*메인 이미지*/
+  clear: both;
+}
+
+.main_title{ /*상단 메인 타이틀*/
+  width: 305px;
+  height: 138px;
+  margin: 0 auto;
+  padding-top: 70px;
+  text-align: center;
+}
+.overflow{
+  overflow: hidden;
+}
+.main_title img{
+  display: inline-block; /*이미지 고유의 여백 제거*/
+}
+.main_title img:nth-child(1){
+  margin-bottom: 3px;
+}
+
+.main_text{ /*메인 텍스트 포지션*/
+  width: 500px;
+  height: 130px;
+  position: absolute; /*main wrap의 자식*/
+  top: 260px;
+  left: 420px;
+}
+.mont{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.main_link{ /*나중에 움직임 소스*/
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /*링크 영역 원형으로 만들기*/
+  position: absolute; /*main wrap의 자식*/
+  bottom: 500px;
+  left: -280px;
+}
+.main_link a{
+  width: 100%;
+  height: 100%;
+  display: block; /*링크 영역이 이미지를 다 감싸게끔*/
+  border-radius: 50%; /*링크 영역 원형으로 만들기*/
+}
+.main_link img:nth-child(1){
+  display: block; /*이미지 고유의 여백 제거*/
+  border-radius: 50%; /*링크 영역 원형으로 만들기*/
+}
+.main_link_line{ /*hover시 움직이도록*/
+  width: 200px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  bottom: 110px;
+  left: -80px;
+  transition-property:all; /*속성값*/
+  transition-duration:0.4s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+.main_link:hover .main_link_line{
+  transform: translateX(110px);
+}
+
+
+
+/*con1 전체 이미지 슬라이드*/
+
+#con1_wrap{
+  width: 1320px;
+  height: 640px;
+  margin: 0 auto;
+  margin-top: 180px;
+  margin-bottom: 200px;
+}
+
+.con1_left{ /*con1 왼쪽 내용*/
+  width: 320px;
+  height: 100%;
+  float: left;
+  background: url(../images/back_circle.png) no-repeat 20px 50px; /*배경 원*/
+}
+
+.con1_left h1{ /*con1 타이틀*/
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  letter-spacing: -0.02em;
+  padding: 160px 0 160px 50px;
+}
+.con1_left p{ /*con1 내용*/
+  margin-bottom: 60px;
+}
+
+.con1_link{ /*con1 링크*/
+  width: 100%;
+  height: 120px;
+}
+.con1_link li{
+  float: left;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /*hover 영역 둥글게*/
+  border: 2px solid #718878;
+  position: relative; /*hover_line의 부모*/
+}
+.con1_link a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /*hover 영역 둥글게*/
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  color: #718878;
+  box-sizing: border-box;
+  padding-top: 45px;
+}
+.con1_link li:first-child{
+  margin-right: 30px;
+}
+.con1_link_line{ /*링크 선*/
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: -26px;
+  transition-property:all; /*속성값*/
+  transition-duration:0.3s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+.con1_link li:first-child:hover .con1_link_line{
+  transform: translateX(10px);
+}
+
+.con1_link li:last-child img{ /*ROOM B에 hover시 다시 나타나도록 수정*/
+  display: none;
+}
+.con1_link_line2{ /*링크 선2*/
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: -26px;
+}
+
+.con1_right{ /*con1 오른쪽 이미지 슬라이드*/
+  width: 1000px;
+  height: 100%;
+  float: left;
+}
+.con1_right img{
+  display: block; /*이미지 고유의 여백 제거*/
+  width: 100%;
+}
+
+/*소스 s*/
+
+.swiper-container {
+  width: 1000px;
+  height: 100%;
+  float: left;
+}
+.swiper-slide {
+  text-align: center; font-size: 18px; background: #fff;
+			  /* Center slide text vertically */
+			  display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: -webkit-flex;
+			  display: flex;
+			  -webkit-box-pack: center;
+			  -ms-flex-pack: center;
+			  -webkit-justify-content: center;
+			  justify-content: center;
+			  -webkit-box-align: center;
+			  -ms-flex-align: center;
+			  -webkit-align-items: center;
+			  align-items: center;
+      }
+.swiper-slide img{
+  width:100%;
+}
+
+/*이동버튼 영역*/
+.swiper-button-next:after,
+.swiper-button-prev:after{display:none;}/*소스에 들어있는 버튼 삭제*/
+.swiper-button-next,
+.swiper-button-prev{width:70px; height:70px;}/*버튼 크기*/
+.swiper-button-prev{left:10px; background:url(../images/2leftallow_2e4e43.png);}/*버튼 위치, 버튼 이미지*/
+.swiper-button-next{right:10px; background:url(../images/2rightallow_2e4e43.png);}/*버튼 위치, 버튼 이미지*/
+.swiper-button-prev:hover{background:url(../images/22leftallow_2e4e43.png);}/*버튼 호버 이미지*/
+.swiper-button-next:hover{background:url(../images/22rightallow_2e4e43.png);}/*버튼 호버 이미지*/
+
+/*블릿버튼 영역*/
+.swiper-pagination-bullet{background:pink; width:10px; height:10px; opacity:0.5;}
+.swiper-pagination-bullet-active{opacity:1;}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{bottom:10px;}
+
+/*소스 f*/
+
+
+
+/*con2 리빙룸*/
+
+#con2_wrap1{ /*con2 상단 wrap*/
+  width: 1320px;
+  height: 520px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.con2_left img{ /*이미지 고유의 여백 제거*/
+  display: block;
+}
+
+.con2_left{ /*con2 왼쪽 이미지 슬라이드*/
+  width: 820px;
+  height: 100%;
+  float: left;
+}
+.con2_left ul{
+  width: 100%;
+  height: 100%;
+}
+.con2_left ul li{ /*con2 이미지 4개*/
+  width: 400px;
+  height: 250px;
+  float: left;
+}
+.con2_left ul li:nth-child(1){
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.con2_left ul li:nth-child(3){
+  margin-right: 20px;
+}
+
+.con2_right{ /*con2 오른쪽 내용*/ /*이 style 계속 적용*/
+  width: 390px;
+  height: 100%;
+  float: left;
+  margin-left: 110px;
+  background: url(../images/back_circle.png) no-repeat 25px top; /*배경 원*/
+  animation: wiggle2 1s infinite alternate ease-in-out; /*배경 원 움직임*/
+}
+@keyframes wiggle2 {
+  0%{background-position-x: 24px;}
+  100%{background-position-x: 31px;}
+}
+
+.con2_right h1{ /*con2 타이틀*/
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  letter-spacing: -0.02em;
+  padding: 110px 0;
+}
+.con2_right p{ /*con2 내용*/
+  margin-bottom: 50px;
+}
+
+.con2_link{ /*con2 링크*/ /*이 style 계속 적용*/
+  width: 100%;
+  height: 124px;
+}
+.con2_link li{
+  float: left;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /*hover 영역 둥글게*/
+  border: 2px solid #718878;
+  position: relative; /*hover_line의 부모*/
+}
+.con2_link a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /*hover 영역 둥글게*/
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  color: #718878;
+  box-sizing: border-box;
+  padding-top: 45px;
+}
+.con2_link li:first-child{
+  margin-right: 30px;
+}
+.con2_link_line{ /*링크 선*/
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: -26px;
+  transition-property:all; /*속성값*/
+  transition-duration:0.3s; /*효과완료하는 시간*/
+  transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+  transition-delay:0; /*효과의 지연되는 시간*/
+}
+.con2_link li:hover .con2_link_line{
+  transform: translateX(10px);
+}
+
+.con2_link_line2{ /*링크 선2*/
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: -26px;
+}
+.con2_link li:last-child img{ /*ROOM B에 hover시 다시 나타나도록 수정*/
+  display: none;
+}
+
+
+#con2_wrap2{ /*con2 하단 wrap*/
+  width: 100%;
+  height: 530px;
+  background: url(../images/con2_back.png) no-repeat top right;
+  margin-bottom: 200px;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.con2_wrap2_1320{ /*con2 하단 내용 감싸는 wrap*/
+  width: 1320px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.con2_left2{ /*con2 하단 왼쪽 내용*/
+  width: 380px;
+  height: 100%;
+  float: left;
+  padding-right: 80px;
+  box-sizing: border-box;
+}
+.con2_left2_title{ /*con2 하단 왼쪽 타이틀*/
+  margin: 90px 0 60px 60px;
+  display: inline-block;
+  height: 45px;
+  background: url(../images/ROOMdeco.png) no-repeat center bottom;
+}
+.con2_left2_title h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.con2_link2{ /*con2 화살표 링크*/ /*이 style 계속 적용*/
+  width: 240px;
+  height: 70px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.con2_link2 li{
+  width: 70px;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+.con2_link2_allow{
+  display: block;
+  margin-top: 19px;
+}
+.con2_link2_hover{ /*con2 화살표 hover*/
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #718878;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+
+/*con2 하단 오른쪽 갤러리 구문 외부 소스 s*/
+
+.slider {
+  width: 940px;
+  height: 100%;
+  float: left;
+}
+
+.slick-slide {
+margin-right: 20px;
+}
+
+.slick-slide img {
+width: 300px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+content:'';
+}
+
+
+.slick-slide {
+transition: all ease-in-out .2s;
+opacity: 1;
+}
+
+.slick-active {
+opacity: 1;
+}
+
+.slick-current {
+opacity: 1;
+}
+
+/*이동버튼 꾸미기*/
+.slick-prev, .slick-next{
+width:70px;
+height:70px;
+}
+.slick-prev{ /*왼쪽 화살표*/
+background:url(../images/1.png) no-repeat;
+transition-property:all; /*속성값*/
+transition-duration:0.3s; /*효과완료하는 시간*/
+transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+transition-delay:0; /*효과의 지연되는 시간*/
+}
+.slick-prev:hover{
+background:url(../images/2.png) no-repeat;
+}
+.slick-next{ /*오른쪽 화살표*/
+background:url(../images/3.png) no-repeat;
+transition-property:all; /*속성값*/
+transition-duration:0.3s; /*효과완료하는 시간*/
+transition-timing-function:ease-in-out;  /*효과의 속도곡선*/
+transition-delay:0; /*효과의 지연되는 시간*/
+}
+.slick-next:hover{
+background:url(../images/4.png) no-repeat;
+}
+
+/*con2 하단 오른쪽 갤러리 구문 외부 소스 f*/
+
+
+
+
+/*con3 침실*/
+
+#con3_wrap{ /*con3 상단 wrap*/
+  width: 1320px;
+  height: 540px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.con3_left{ /*con3 왼쪽 이미지*/
+  width: 820px;
+  height: 100%;
+  float: left;
+}
+.con3_left img{
+  display: block; /*이미지 고유의 여백 제거*/
+}
+
+
+#con3_wrap2{ /*con3 하단 wrap*/
+  width: 100%;
+  height: 250px;
+  background: url(../images/con3_back.png) no-repeat -10px top;
+  margin-bottom: 200px;
+}
+.con3_wrap2_1320{ /*con3 하단 내용 감싸는 wrap*/
+  width: 1320px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.con3_left2{ /*con2 하단 왼쪽 내용*/
+  width: 360px;
+  height: 100%;
+  float: left;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+.con3_left2_title{ /*con3 하단 왼쪽 타이틀*/
+  margin: 30px 0 0 60px;
+  display: inline-block;
+  height: 45px;
+  background: url(../images/ROOMdeco.png) no-repeat center bottom;
+}
+.con3_left2_title h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.con3_right2{ /*con3 하단 오른쪽 이미지 슬라이드*/
+  width: 940px;
+  height: 100%;
+  float: right;
+}
+.con3_right2 ul{
+  width: 2500px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.con3_right2 ul li{
+  width: 400px;
+  height: 100%;
+}
+.con3_right2 ul li img{
+  display: block; /*이미지 고유의 여백 제거*/
+}
+
+
+
+/*con4 욕실*/
+
+#con4_wrap{
+  width: 1320px;
+  height: 580px;
+  margin: 0 auto;
+  margin-bottom: 220px;
+}
+.con4_left{ /*con4 왼쪽 이미지 슬라이드*/
+  width: 820px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+.con4_left img{
+  display: block; /*이미지 고유의 여백 제거*/
+}
+.con4_left ul{
+  width: 2080px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/*footer*/
+
+#footer{ /*푸터_배경*/
+  width: 100%;
+  height: 500px;
+  background: url(../images/footer_background.png) no-repeat top center;
+  background-size: cover;
+  padding-top: 170px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+}
+
+.footer_inner{
+  width: 1320px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer_symbol{
+  float: left;
+  margin-top: 5px;
+}
+.footer_symbol a{
+  display: block;
+  width: 77px;
+  margin-left: 15px;
+  height: 100px;
+}
+.footer_logotype{
+  display: block;
+  margin-top: 10px;
+}
+
+.footer_link{ /*nav*/
+  float: left;
+  margin-left: 60px;
+}
+.footer_link li a{
+  display: block;
+  color: #718878;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 2px 0;
+}
+.footer_link li a:hover{ /*링크 hover시 색상 변환*/
+  color: #93a69c;
+}
+
+.footer_text{ /*정보*/
+  float: right;
+  margin-left: 100px;
+}
+.footer_text li{
+  font-size: 14px;
+  color: #718878;
+  letter-spacing: 0;
+  padding: 2px 0;
+  line-height: 24px;
+}
+.footer_text li:nth-child(1){
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.015em;
+}
+.montserrat{ /*영어텍스트 폰트변경*/
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fnb{
+  clear: both;
+  float: left;
+  color: #718878;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 100px;
+}
+.fnb2{
+  color: #718878;
+  font-size: 14px;
+  letter-spacing: 0;
+  float: right;
+  margin-left: 70px;
+  margin-top: 100px;
+}
+.hover:hover{ /*링크 hover시 색상 변환*/
+  color: #93a69c;
+}

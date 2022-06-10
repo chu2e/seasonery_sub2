@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1400"> <!--화면을 줄여도 뭉개지지 않도록-->
+    <title>Seasonery</title>
+
+    <!--외부스타일 연결-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--파비콘-->
+    <link rel="icon" href="images/favicon.png" type="png" sizes="32x32"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@300&family=Montserrat:wght@500;600&display=swap" rel="stylesheet"> <!--Montserrat-Medium,Semibold-->
+
+    <!--제이쿼리 연결-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!--con1 이미지 슬라이드 css-->
+	<link href="css/swiper.css" rel="stylesheet" type="text/css"><!-- 수정X -->
+
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--con2 리빙룸 하단 갤러리 css-->
+    <link href="css/slick.css" rel="stylesheet" type="text/css"><!-- 수정X -->
+    <link href="css/slick-theme.css" rel="stylesheet" type="text/css"><!-- 수정X -->
+
+
+</head>
+<body>
+
+
+
+    <div class="fixed"> <!--예약하기 고정 s-->
+        <a href="../seasonery_sub03/index.html">
+            <img src="images/fixed_booknow2.png" alt="픽스 예약하기">
+            <img src="images/fixed_booknow_rotate.png" alt="픽스 예약하기 회전" class="fixed_rotate">
+        </a>
+    </div> <!--예약하기 고정 f-->
+
+
+
+    <div id="top"> <!--메인 #eadfd0-->
+
+
+        <div class="header"> <!--header s-->
+
+            <a href="../seasonery/index.html" class="symbol">
+                <img src="images/symbol.png" alt="심볼">
+            </a>
+
+            <img src="images/logotype_small.png" alt="로고 스몰" class="logo_small">
+
+            <div class="menu">
+                <a href="#" class="menubar">
+                    <img src="images/menubar.png" alt="메뉴바">
+                </a>
+                <div class="menubar_sub">
+                    <ul>
+                        <li><a href="#"><img src="images/menubar_mypage.png" alt="메뉴바 내정보"></a></li>
+                        <li><a href="#"><img src="images/menubar_cart.png" alt="메뉴바 장바구니"></a></li>
+                        <li><a href="#"><img src="images/menubar_talk.png" alt="메뉴바 톡"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="nav">
+                <li> <!--부모-->
+                    <a href="../seasonery_sub01/index.html">ABOUT</a> <!--자식이지만 자기 자체가 부모-->
+                    <div class="sub1"> <!--자식2-->
+                        <ul>
+                            <li><a href="../seasonery_sub01/index.html">Story</a></li>
+                            <li><a href="#">For season</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="index.html">ROOM</a>
+                    <div class="sub2">
+                        <ul>
+                            <li><a href="index.html">Flowery</a></li>
+                            <li><a href="#">Greenery</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="../seasonery_sub03/index.html">RESERVATION</a></li>
+                <li><a href="../seasonery_sub04/index.html">SHOP</a></li>
+            </ul>
+
+        </div> <!--header f-->
+
+
+
+        <div class="main_wrap"> <!--main wrap s--> <!--이미지 back-->
+
+            <div class="main_title"> <!--main wrap 내부 상단 s-->
+                <div class="overflow"><img src="images/main_title.png" alt="메인 타이틀" data-aos="fade-down" data-aos-duration="1000"></div>
+                <img src="images/main_title2.png" alt="메인 타이틀2" data-aos="flip-up" data-aos-duration="2200">
+            </div> <!--main wrap 내부 상단 f-->
+
+            <div class="main_text"> <!--main wrap 포지션 s-->
+                <p>무채색의 겨울이 지나고 아름답게 피어나는 봄꽃으로 가득한 방입니다.<br>
+                현관에서부터 화사한 빛깔과 짙은 향기를 머금은 꽃들이 여러분을 반겨줍니다.<br>
+                따스한 봄, 피부에 닿는 빛과 바람, 손길이 닿는 곳마다 스치는 꽃잎의 결,<br>
+                평소에 감상하지 못했던 것들을 이곳에서 느껴보세요.<br>
+                2~4인 <span class="mont">ROOM A</span> / 3~6인 <span class="mont">ROOM B</span>를 살펴보실 수 있습니다. 
+                </p>
+            </div> <!--main wrap 포지션 f-->
+
+            <div class="main_link" data-aos="fade-right"> <!--main wrap 포지션 s-->
+                <a href="#">
+                    <img src="images/main_link.png" alt="room Greenery로 이동">
+                </a>
+                <img src="images/main_circle_hover_line.png" alt="링크 hover 선" class="main_link_line">
+            </div> <!--main wrap 포지션 f-->
+
+        </div> <!--main wrap f-->
+
+
+    </div> <!--메인 f-->
+
+
+
+    <div id="con1_wrap"> <!--con1 방 전체 보기 s-->
+
+        <div class="con1_left"> <!--con1 왼쪽 내용 s-->
+            <h1 data-aos="flip-up">ROOM A</h1>
+            <p>- 체크인 15:00 / 체크아웃 11:00<br>
+            - 기준인원 2인 / 최대인원 4인<br>
+            - SIMMONS 매트리스 LK, Q구스 침구</p>
+
+            <ul class="con1_link"> <!--con1 링크 s-->
+                <li data-aos="fade-up">
+                    <a href="#">ROOM A</a>
+                    <img src="images/circle_hover_line.png" alt="링크 선" class="con1_link_line">
+                </li>
+                <li data-aos="fade-up" data-aos-delay="100">
+                    <a href="#">ROOM B</a>
+                    <img src="images/circle_hover_line.png" alt="링크 선" class="con1_link_line2">
+                </li>
+            </ul> <!--con1 링크 f-->
+        </div> <!--con1 왼쪽 내용 f-->
+
+        
+        <div class="swiper-container"> <!--con1 오른쪽 슬라이드 이미지 s-->
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/con1_slide1.jpg" alt="con1 슬라이드 이미지1"></div>
+              <div class="swiper-slide"><img src="images/con1_slide2.jpg" alt="con1 슬라이드 이미지2"></div>
+              <div class="swiper-slide"><img src="images/con1_slide4.jpg" alt="con1 슬라이드 이미지3"></div>
+              <div class="swiper-slide"><img src="images/con1_slide3.jpg" alt="con1 슬라이드 이미지4"></div>
+              <div class="swiper-slide"><img src="images/con1_slide5.jpg" alt="con1 슬라이드 이미지5"></div>
+              <div class="swiper-slide"><img src="images/con1_slide6.jpg" alt="con1 슬라이드 이미지6"></div>
+              <div class="swiper-slide"><img src="images/con1_slide7.jpg" alt="con1 슬라이드 이미지7"></div>
+              <div class="swiper-slide"><img src="images/con1_slide8.jpg" alt="con1 슬라이드 이미지8"></div>
+            </div>
+            <!-- 화살표 버튼 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- 블릿 버튼 -->
+            <div class="swiper-pagination"></div>
+          </div> <!--con1 오른쪽 슬라이드 이미지 f-->
+
+    </div> <!--con1 방 전체 보기 f-->
+
+
+
+    <div id="con2_wrap1"> <!--con2 리빙룸 상단 s-->
+
+        <div class="con2_left"> <!--con2 왼쪽 이미지 슬라이드 s-->
+            <ul>
+                <li><img src="images/con2_img1.jpg" alt="con2 리빙룸 이미지1"></li>
+                <li><img src="images/con2_img2.jpg" alt="con2 리빙룸 이미지2"></li>
+                <li><img src="images/con2_img3.jpg" alt="con2 리빙룸 이미지3"></li>
+                <li><img src="images/con2_img4.jpg" alt="con2 리빙룸 이미지4"></li>
+            </ul>
+        </div> <!--con2 왼쪽 이미지 슬라이드 f-->
+
+
+        <div class="con2_right"> <!--con2 오른쪽 내용 s-->
+            <h1 data-aos="flip-up">LIVING ROOM</h1>
+            <p>TV·오디오의 노출은 최소화하고 다이닝 공간을 확장했습니다.<br>
+            큰 창으로 들어오는 빛은 따뜻한 우드톤의 다이닝 공간에 닿아<br>
+            서정적인 장면을 만들어 줍니다.</p>
+
+            <ul class="con2_link"> <!--con2 링크 s-->
+                <li data-aos="fade-up">
+                    <a href="#">ROOM A</a>
+                    <img src="images/circle_hover_line.png" alt="링크 선" class="con2_link_line">
+                </li>
+                <li data-aos="fade-up" data-aos-delay="100">
+                    <a href="#">ROOM B</a>
+                    <img src="images/circle_hover_line.png" alt="링크 선" class="con2_link_line2">
+                </li>
+            </ul> <!--con2 링크 f-->
+        </div> <!--con2 오른쪽 내용 f-->
+
+    </div> <!--con2 리빙룸 상단 f-->
+
+
+    <div id="con2_wrap2"> <!--con2 리빙룸 하단 s-->
+
+        <div class="con2_wrap2_1320"> <!--con2 리빙룸 하단 내용 wrap s-->
+
+
+            <div class="con2_left2"> <!--con2 하단 왼쪽 내용 s-->
+                <div class="con2_left2_title">
+                    <h2>ROOM A</h2>
+                </div>
+    
+                <p>자연 원목의 유려한 무늬결을 품은 인테리어에<br>
+                꽃과 식물로 거실을 꾸미고, 사랑하는 사람들과<br>
+                음식을 즐기고 대화를 나누는 시간에 집중할 수<br>
+                있도록 공간을 구성하였습니다.</p>
+            </div> <!--con2 하단 왼쪽 내용 f-->
+
+            <!--con2 하단 오른쪽 갤러리 구문 s-->
+            <section class="regular slider">
+                <div>
+                    <img src="images/con2_slide1.jpg" alt="co2 하단 슬라이드 이미지1">
+                </div>
+                <div>
+                    <img src="images/con2_slide2.jpg" alt="co2 하단 슬라이드 이미지2">
+                </div>
+                <div>
+                    <img src="images/con2_slide7.jpg" alt="co2 하단 슬라이드 이미지3">
+                </div>
+                <div>
+                    <img src="images/con2_slide3.jpg" alt="co2 하단 슬라이드 이미지4">
+                </div>
+                <div>
+                    <img src="images/con2_slide8.jpg" alt="co2 하단 슬라이드 이미지5">
+                </div>
+                <div>
+                    <img src="images/con2_slide5.jpg" alt="co2 하단 슬라이드 이미지6">
+                </div>
+                <div>
+                    <img src="images/con2_slide4.jpg" alt="co2 하단 슬라이드 이미지6">
+                </div>
+                <div>
+                    <img src="images/con2_slide6.jpg" alt="co2 하단 슬라이드 이미지6">
+                </div>
+            </section>
+            <!--con2 하단 오른쪽 갤러리 구문 f-->
+
+
+        </div> <!--con2 리빙룸 하단 내용 wrap f-->
+
+    </div> <!--con2 리빙룸 하단 f-->
+
+
+
+    <div id="con3_wrap"> <!--con3 침실 상단 s-->
+
+        <div class="con3_left">
+            <img src="images/con3_img1.jpg" alt="">
+        </div>
+
+
+        <div class="con2_right"> <!--con3 오른쪽 내용 s--> <!--con2 style 적용-->
+            <h1 data-aos="flip-up">BEDROOM</h1>
+            <p>온종일 따뜻한 햇살이 내려 앉는 넓은 창을 통해<br>
+            사계절의 다양한 모습이 담긴 숲과 정원을 마주할 수 있습니다.<br>
+            푸른 풍경이 스며든 침실에 누워 자연을 가까이 만나고<br>
+            가만히 바라보는 시간을 가져보시길 바랍니다.</p>
+
+            <ul class="con2_link"> <!--con3 링크 s-->
+                <li data-aos="fade-up">
+                    <a href="#">ROOM A</a>
+                    <img src="images/circle_hover_line.png" alt="링크 선" class="con2_link_line">
+                </li>
+                <li data-aos="fade-up" data-aos-delay="100">
+                    <a href="#">ROOM B</a>
+                    <img src="images/circle_hover_line.png" alt="링크 선" class="con2_link_line2">
+                </li>
+            </ul> <!--con3 링크 f-->
+        </div> <!--con3 오른쪽 내용 f-->
+
+    </div> <!--con3 침실 상단 f-->
+
+
+    <div id="con3_wrap2"> <!--con3 침실 하단 s-->
+
+        <div class="con3_wrap2_1320"> <!--con3 침실 하단 내용 wrap s-->
+
+
+            <div class="con3_left2"> <!--con3 하단 왼쪽 내용 s-->
+                <div class="con3_left2_title">
+                    <h2>ROOM A</h2>
+                </div>
+
+                <ul class="con2_link2 con3_circle"> <!--con3 슬라이드 링크 s--> <!--con2 style 적용-->
+                    <li>
+                        <a href="#" class="con2_link2_allow"><img src="images/leftallow_718878.png" alt="con2 좌 화살표"></a>
+                        <a href="#" class="con2_link2_hover con3_hover"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="con2_link2_allow"><img src="images/rightallow_718878.png" alt="con2 우 화살표"></a>
+                        <a href="#" class="con2_link2_hover con3_hover"></a>
+                    </li>
+                </ul> <!--con3 슬라이드 링크 f-->
+            </div> <!--con3 하단 왼쪽 내용 f-->
+
+            
+            <div class="con3_right2"> <!--con3 하단 오른쪽 이미지 슬라이드 s-->
+                <ul>
+                    <li><a href="#">
+                        <img src="images/con3_slide1.jpg" alt="con3 슬라이드 이미지1">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/con3_slide2.jpg" alt="con3 슬라이드 이미지2">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/con3_slide3.jpg" alt="con3 슬라이드 이미지3">
+                    </a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div> <!--con3 하단 오른쪽 이미지 슬라이드 s-->
+
+
+        </div> <!--con3 침실 하단 내용 wrap f-->
+
+    </div> <!--con3 침실 하단 f-->
+
+
+
+    <div id="con4_wrap"> <!--con4 욕실 wrap s-->
+
+        <div class="con4_left"> <!--con4 왼쪽 이미지 슬라이드 s-->
+            <ul>
+                <li><img src="images/con4_img1.jpg" alt="con4 욕실 이미지1"></li>
+                <li><img src="images/con4_img2.jpg" alt="con4 욕실 이미지2"></li>
+                <li><img src="images/con4_img3.jpg" alt="con4 욕실 이미지3"></li>
+                <li><img src="images/con4_img5.jpg" alt="con4 욕실 이미지4"></li>
+                <li><img src="images/con4_img6.jpg" alt="con4 욕실 이미지5"></li>
+            </ul>
+        </div> <!--con4 왼쪽 이미지 슬라이드 f-->
+
+
+        <div class="con2_right"> <!--con4 오른쪽 내용 s--> <!--con2 style 적용-->
+            <h1 data-aos="flip-up">BATHROOM</h1>
+            <p>시즈너리의 모든 욕실은 내부에서도 정원을 즐기실 수 있습니다.<br>
+            마당을 향한 네모난 창으로 아침 햇살이 듬뿍 쏟아지고,<br>
+            창 너머로는 1층 마당에 심은 꽃과 나무가 한가득 보입니다.<br>
+            -<br>
+            침실과 거실 사이의 테라스와 연결된 야외 공간에는<br>
+            푸른 하늘과 자연으로 둘러싸인 야외 욕조가 마련되어 있습니다.<br>
+            온전히 자연의 일부가 되어 여유로운 휴식을 취해보세요.</p>
+
+            <ul class="con2_link2 con4_circle"> <!--con4 슬라이드 링크 s--> <!--con2 style 적용-->
+                <li>
+                    <a href="#" class="con2_link2_allow"><img src="images/leftallow_718878.png" alt="con2 좌 화살표"></a>
+                    <a href="#" class="con2_link2_hover con4_hover"></a>
+                </li>
+                <li>
+                    <a href="#" class="con2_link2_allow"><img src="images/rightallow_718878.png" alt="con2 우 화살표"></a>
+                    <a href="#" class="con2_link2_hover con4_hover"></a>
+                </li>
+            </ul> <!--con4 슬라이드 링크 f-->
+        </div> <!--con4 오른쪽 내용 f-->
+        
+    </div> <!--con4 욕실 wrap f-->
+
+
+
+
+    <div id="footer"> <!--footer s-->
+
+
+        <div class="footer_inner"> <!--footer inner s-->
+
+            <div class="footer_symbol"> <!--로고 s-->
+                <a href="../seasonery/index.html">
+                    <img src="images/footer_symbol.png" alt="푸터 심볼">
+                </a>
+                <img src="images/footer_logotype.png" alt="푸터 로고타입" class="footer_logotype">
+            </div> <!--로고 f-->
+
+            <ul class="footer_link"> <!--nav s-->
+                <li><a href="../seasonery_sub01/index.html">STORY</a></li>
+                <li><a href="index.html">ROOM Flowery</a></li>
+                <li><a href="../seasonery_sub03/index.html">RESERVATION</a></li>
+                <li><a href="../seasonery_sub04/index.html">SHOP</a></li>
+            </ul>
+
+            <ul class="footer_link link2">
+                <li><a href="#">For season</a></li>
+                <li><a href="#">ROOM Greenery</a></li>
+            </ul> <!--nav f-->
+
+            <ul class="footer_text"> <!--정보 s-->
+                <li>CONTACT</li>
+                <li>박주희</li>
+                <li class="montserrat">H.P. 010 - 0000 - 0000</li>
+                <li class="montserrat">E-mail. o_omi99@naver.com</li>
+                <li class="montserrat">Kakaotalk ID. s2sonery</li>
+            </ul>
+
+            <ul class="footer_text">
+                <li>OFFLINE SHOP</li>
+                <li class="montserrat">everyday OPEN</li>
+                <li class="montserrat">AM 10:00 - PM 18:00</li>
+                <li class="montserrat">Tel. 031 - 592 - 0000</li>
+                <li>경기도 남양주시 수동면 축령산로</li>
+            </ul> <!--정보 s-->
+
+            <p class="fnb">copyright ⓒ 2022 Seasonery all rights reserved.</p>
+            <p class="fnb2">사업자등록번호 <span class="montserrat">000-00-00000</span></p>
+            <a href="#" class="fnb2 hover">개인정보처리방침</a>
+            <a href="#" class="fnb2 hover">이용약관</a>
+
+        </div> <!--footer inner f-->
+
+
+    </div> <!--footer f-->
+
+
+
+    <!--con1 이미지 슬라이드 js-->
+    <script src="js/swiper.min.js"></script><!-- 수정X -->
+	<script src="js/slide.js"></script><!--디자인에 맞게 수정-->
+
+    <!--aos-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!--con2 리빙룸 하단 갤러리 js -->
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script><!-- 제이쿼리 라이브러리,수정X -->
+	<script src="js/slick.js" type="text/javascript" charset="utf-8"></script><!-- 수정X -->
+
+	<script src="js/gallery1.js" type="text/javascript" charset="utf-8"></script><!-- 디자인에 맞게 수정 -->
+
+    
+    </body>
+    </html>
