@@ -706,9 +706,15 @@ background:url(../images/4.png) no-repeat;
   width: 820px;
   height: 100%;
   float: left;
+  animation: fade ease 30s infinite forwards;
+  background: url(../images/con3_img1.jpg) no-repeat top center;
 }
-.con3_left img{
-  display: block; /*이미지 고유의 여백 제거*/
+@keyframes fade {
+  0%{background: url(../images/con3_img1.jpg) no-repeat top center;}  
+  22%{background: url(../images/con3_img2.jpg) no-repeat top center;}  
+  44%{background: url(../images/con3_img5.jpg) no-repeat top center;}  
+  66%{background: url(../images/con3_img3.jpg) no-repeat top center;}  
+  88%{background: url(../images/con3_img4.jpg) no-repeat top center;}   
 }
 
 
@@ -722,7 +728,7 @@ background:url(../images/4.png) no-repeat;
   width: 1320px;
   height: 100%;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: hidden; /*튀어나간 부분 잘리게*/
 }
 .con3_left2{ /*con2 하단 왼쪽 내용*/
   width: 360px;
@@ -750,7 +756,7 @@ background:url(../images/4.png) no-repeat;
   float: right;
 }
 .con3_right2 ul{
-  width: 2500px;
+  width: 2080px;
   height: 100%;
   display: flex;
   justify-content: space-between;
